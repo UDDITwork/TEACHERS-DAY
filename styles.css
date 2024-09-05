@@ -1,0 +1,276 @@
+body {
+    font-family: 'Lora', serif;
+    background: linear-gradient(to right, #f7cac9, #92a8d1);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0; /* Remove default margin */
+  }
+header {
+    background-color: #4a4e69;
+    padding: 10px 0;
+}
+.quote{
+    color:blue;
+}
+nav ul {
+    display:flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+
+}
+.Bakchodi{
+    text-align:center;
+    color:#fff ;
+    display:inline-flex;
+    gap:10px;
+
+}
+.Bakchodi a{
+    color:#92a8d1;
+}
+nav ul li a {
+    color: #0c0808;
+    text-decoration: rgb(9, 9, 9);
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s;
+    border:0px  solid rgb(167, 148, 148);
+    border-radius:9px;
+    font-weight:bold;
+    border-color:#000;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.teacher-grid {
+    flex: 1; /* Take remaining space */
+  }
+.teacher-item img {
+    width: 50%;
+    border-radius:20px;
+    border: 3px solid black;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 120px;
+}
+
+.teacher-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px #ff6b6b;
+}
+
+.teacher-item p {
+    text-align:left;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #4a4e69;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position:relative;
+}
+
+.footer-photo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.container h1{
+    text-align: center;
+}
+.container{
+    text-align:justify;
+    font-weight:bold;
+    border-style: ridge;
+    border-width:thick;
+    place-content: center;
+    text-shadow: 0 1px 0 #000;
+    color:white;
+    --border-angle:0turn;
+    --main-bg: conic-gradient(
+            from var(--border-angle),
+            #213,
+            #112 5%,
+            #112 60%,
+            #213 95%
+          );
+
+       
+        border: solid 5px transparent;
+        border-radius: 2em;
+        --gradient-border: conic-gradient(from var(--border-angle), transparent 25%, #08f, #f03 99%, transparent);
+        
+        background: 
+          
+          var(--main-bg) padding-box,
+          
+          var(--gradient-border) border-box, 
+          
+          var(--main-bg) border-box;
+        
+        background-position: center center;
+        animation: bg-spin 3s linear infinite;
+        @keyframes bg-spin {
+          to {
+            --border-angle: 1turn;
+          }
+        }
+      &:hover {
+          animation-play-state: paused;
+        }
+      }
+      
+      @property --border-angle {
+        syntax: "<angle>";
+        inherits: true;
+        initial-value: 0turn;
+      }
+      
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .teacher-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .teacher-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .footer-photo {
+        width: 40px;
+        height: 40px;
+        right: 10px;
+        bottom: 10px;
+    }
+}
+.better{
+    border-style: ridge;
+    border-color:blue;
+    border-radius:5%;
+    margin-left:10px;
+    border-width: 5px;
+}
+.better h3{
+    text-align:justify;
+    padding: 15px;
+}
+.emotional-content h1{
+border-color: #213;
+border-bottom: #0c0808;
+border-style: double;
+display:inline;
+margin-left:100px;
+text-align:center;
+}
+.emotional-content p{
+    text-align: justify;
+    border-style: dotted;
+    display:inline-block;
+    margin-left:100px;
+    font-weight:bold;
+    color:blue;
+}
+
+@media (max-width: 480px) {
+    .teacher-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .footer-photo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Special Love Page */
+.special-love {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.special-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    width:fit-content;
+    height:fit-content;
+    border-color:  10px #0c0808;
+    font-weight:bold;
+    border-style:ridge;
+    border-width:thick;
+
+}
+
+.special-item img {
+    flex: 0 0 20%;
+    border-radius: 10px;
+    width: 50px;
+    height: 200px;
+    border-width:  10px #0c0808;
+    font-weight:bold;
+}
+
+.special-text {
+    flex: 1;
+    font-size: 18px;
+    font-weight:bold;
+}
+
+@media (max-width: 768px) {
+    .special-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .special-item img {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .special-text {
+        text-align: center;
+    }
+}
